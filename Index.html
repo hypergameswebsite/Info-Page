@@ -1,4 +1,213 @@
 <!DOCTYPE html>
-<title>
-  <head>Info Page</head>
-</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hyper Games</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #020600;
+      --panel: #071104;
+      --accent: #09b44a;
+      --text: #e5f0db;
+      --muted: #8dbb96;
+      --border: rgba(9, 180, 74, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      background: radial-gradient(circle at top, rgba(9, 180, 74, 0.1), transparent 25%),
+                  linear-gradient(180deg, #040b04 0%, #020600 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .page {
+      width: min(1100px, 100%);
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+
+    header {
+      padding: 30px 0;
+      text-align: center;
+    }
+
+    .brand {
+      font-size: clamp(3rem, 6vw, 5rem);
+      letter-spacing: -0.05em;
+      margin: 0;
+      color: white;
+    }
+
+    .subtitle {
+      margin: 18px auto 0;
+      max-width: 760px;
+      font-size: 1.25rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .hero-card {
+      margin: 36px auto 0;
+      padding: 28px;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      background: rgba(8, 16, 8, 0.72);
+      backdrop-filter: blur(18px);
+      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      margin-top: 32px;
+    }
+
+    .card {
+      background: #09140a;
+      border: 1px solid rgba(9, 180, 74, 0.12);
+      border-radius: 22px;
+      padding: 24px;
+      min-height: 200px;
+    }
+
+    .card h2 {
+      margin: 0 0 14px;
+      font-size: 1.4rem;
+      color: white;
+    }
+
+    .card p,
+    .contact p,
+    .founders p {
+      margin: 0;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .feature-list li {
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(9, 180, 74, 0.06);
+      border: 1px solid rgba(9, 180, 74, 0.1);
+      color: var(--text);
+    }
+
+    .action-area {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .button-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 210px;
+      padding: 16px 24px;
+      border: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #08b44a, #0b9f3d);
+      color: #031203;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform 150ms ease, box-shadow 150ms ease;
+    }
+
+    .button-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 35px rgba(8, 180, 74, 0.24);
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-left,
+    .footer-right {
+      min-width: 220px;
+    }
+
+    .accent {
+      color: var(--accent);
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <p class="subtitle">For gamers, by gamers. Hyper Games delivers bold experiences in games and tools with a dark-edge style built for competitive players and creators.</p>
+      <h1 class="brand">Hyper Games</h1>
+    </header>
+
+    <div class="hero-card">
+      <div class="grid">
+        <div class="card">
+          <h2>Founded</h2>
+          <p>Hyper Games was founded in 2025 by Joshua Dunn and Ēriks Dancitis, bringing together a shared passion for immersive gameplay and modern gaming tools.</p>
+        </div>
+
+        <div class="card contact">
+          <h2>Contact Us</h2>
+          <p>Email us at <a href="mailto:hyper.games.company@gmail.com" class="accent">hyper.games.company@gmail.com</a> for partnerships, support, and project inquiries.</p>
+        </div>
+
+        <div class="card">
+          <h2>Games</h2>
+          <ul class="feature-list">
+            <li>RoboBuild — build, battle, and customize your robot army.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Programs</h2>
+          <ul class="feature-list">
+            <li>Arbot — our flagship gaming assistant and tool for streamlined game control.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="action-area">
+        <a class="button-primary" href="https://eecoder7368.github.io/Arbot-Console-v-" target="_blank" rel="noopener noreferrer">Run Arbot</a>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-left">
+        <p>Hyper Games · Bold gaming for a new era</p>
+      </div>
+      <div class="footer-right">
+        <p>Created for gamers by Joshua Dunn and Ēriks Dancitis.</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
